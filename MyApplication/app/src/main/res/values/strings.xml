@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_system">SystemActivity</string>
+    <string name="title_leave">请假</string>
+    <string name="title_communicate">交流</string>
+    <string name="title_mine">我</string>
+</resources>
