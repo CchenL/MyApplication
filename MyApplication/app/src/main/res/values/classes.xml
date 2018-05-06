@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classes">
+        <item>软件1班</item>
+        <item>软件2班</item>
+        <item>软件3班</item>
+    </string-array>
+</resources>

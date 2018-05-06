@@ -1,21 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <android.support.design.widget.TabLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top">
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/all"
+            android:layout_width="0sp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Right" />
-
-        <android.support.design.widget.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Left" />
-    </android.support.design.widget.TabLayout>
+            android:text="全部"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/year"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="年"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/month"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="月"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加"/>
+    <ListView
+        android:id="@+id/list_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txt_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="15pt"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp" />
+    </LinearLayout>
 </LinearLayout>

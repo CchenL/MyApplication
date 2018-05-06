@@ -1,17 +1,21 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.fragment.*;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SystemActivity extends AppCompatActivity {
@@ -20,7 +24,28 @@ public class SystemActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private BottomNavigationView navigation;
     List<Fragment> listFragment; //存储页面对象
-
+    //菜单项ID常量
+    private static final int ITEM1 = Menu.FIRST;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //添加两个菜单项
+        MenuItem begmenuitem = menu.add(0, ITEM1, 0, "请假单");
+        MenuItem.OnMenuItemClickListener lsn = new MenuItem.OnMenuItemClickListener() {
+            //响应菜单选项被单击事件
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    //
+                    case ITEM1:
+                        Intent intent = new Intent(SystemActivity.this,leaveActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        };
+        begmenuitem.setOnMenuItemClickListener(lsn);
+        return true;
+    }
     private void initView(){
         mViewPager = (ViewPager) findViewById(R.id.main_viewpager);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -83,8 +108,11 @@ public class SystemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_system);
-
         initView();
+        /*fragment_leave fragmentLeave = new fragment_leave();*/
+
     }
+
+
 
 }

@@ -27,6 +27,8 @@
             android:label="@string/title_activity_system">
             <category android:name="android.intent.category.LAUNCHER" />
         </activity>
+        <activity android:name=".leaveActivity">
+        </activity>
     </application>
 
 </manifest>
